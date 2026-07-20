@@ -22,7 +22,7 @@ const Login = () => {
     onSubmit: (values, {setSubmitting}) => {
       console.log(values);
       setSubmitting(true);
-      axios.post('http://localhost:5000/user/authenticate', values)
+      axios.post('http://localhost:3001/user/authenticate', values)
         .then((result) => {
           console.log(result.data);
           localStorage.setItem('token', result.data.token);

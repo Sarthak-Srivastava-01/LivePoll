@@ -34,7 +34,7 @@ const SignUp = () => {
       setSubmitting(true);
       // Send values to backend
 
-      axios.post('http://localhost:5000/user/add', values)
+      axios.post('http://localhost:3001/user/add', values)
         .then((result) => {
           console.log(result);
           toast.success('User Registered Successfully')

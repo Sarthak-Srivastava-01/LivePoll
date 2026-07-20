@@ -23,7 +23,7 @@ const ManageRoom = () => {
             setSubmitting(true);
             // Send values to backend
 
-            axios.post('http://localhost:5000/room/add', values)
+            axios.post('http://localhost:3001/room/add', values)
                 .then((result) => {
                     console.log(result);
                     toast.success('Room Added Successfully');
@@ -42,7 +42,7 @@ const ManageRoom = () => {
     const [roomList, setRoomList] = useState([])
 
     const fetchRooms = () => {
-        const res = axios.get('http://localhost:5000/room/getall')
+        const res = axios.get('http://localhost:3001/room/getall')
             .then((res) => {
                 console.table(res.data);
                 setRoomList(res.data);
@@ -56,7 +56,7 @@ const ManageRoom = () => {
     }, [])
 
     const deleteRoom = (id) => {
-        axios.delete('http://localhost:5000/room/delete/' + id)
+        axios.delete('http://localhost:3001/room/delete/' + id)
             .then((result) => {
                 toast.success('Room Deleted Successfully');
                 fetchRooms();

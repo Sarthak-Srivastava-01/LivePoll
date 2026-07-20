@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { IconLoader3, IconSend2 } from '@tabler/icons-react';
 
 const Home = () => {
   return (
@@ -27,7 +28,15 @@ const Home = () => {
       <div className='w-full grid grid-cols-1 md:grid-cols-3 p-20 bg-red-50'>
         <div className='flex flex-col items-center justify-center'>
           <img src="/real-time-data.png" alt="" className='max-w-24' />
+          <h1 className='text-xl font-semibold'>Real Time Updation</h1>
+        </div>
+        <div className='flex flex-col items-center justify-center'>
+          <img src="/real-time-data.png" alt="" className='max-w-24' />
           <h1 className='text-xl font-semibold'>Real time Updation</h1>
+        </div>
+        <div className='flex flex-col items-center justify-center'>
+          <img src="/real-time-data.png" alt="" className='max-w-24' />
+          <h1 className='text-xl font-semibold'>Pecise Answer Display</h1>
         </div>
       </div>
     </div>

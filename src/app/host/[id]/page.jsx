@@ -43,7 +43,7 @@ const options = {
 
 const Host = () => {
 
-    const [socket, setSocket] = useState(io('http://localhost:5000', { autoConnect: false }));
+    const [socket, setSocket] = useState(io('http://localhost:3001', { autoConnect: false }));
     const questionRef = useRef();
     const [answerList, setAnswerList] = useState([]);
 
@@ -60,7 +60,7 @@ const Host = () => {
     }
 
     const fetchRoomData = async () => {
-        const res = await axios.get('http://localhost:5000/room/getbyid/' + id)
+        const res = await axios.get('http://localhost:3001/room/getbyid/' + id)
         console.log(res.data);
         setRoomData(res.data);
         joinRoom(res.data.name);

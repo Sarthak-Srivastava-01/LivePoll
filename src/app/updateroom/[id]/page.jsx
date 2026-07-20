@@ -13,7 +13,7 @@ const UpdateRoom = () => {
     const [roomData, setRoomData] = useState(null)
 
     const fetchRoomData = async () => {
-        const res = await axios.get(`http://localhost:5000/room/getbyid/${id}`);
+        const res = await axios.get(`http://localhost:3001/room/getbyid/${id}`);
         console.log(res.data);
         setRoomData(res.data);
     }
@@ -24,7 +24,7 @@ const UpdateRoom = () => {
 
     const formSubmit = (values) => {
         console.log(values);
-        axios.put(`http://localhost:5000/room/update/` + id, values)
+        axios.put(`http://localhost:3001/room/update/` + id, values)
             .then((result) => {
                 toast.success('Room Updated Successfully');
             }).catch((err) => {
